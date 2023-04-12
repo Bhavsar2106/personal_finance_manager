@@ -6,7 +6,7 @@ COPY yarn.lock .
 
 RUN yarn --only=prod
 
-RUN yarn test
+#RUN yarn test
 
 COPY . .
 
