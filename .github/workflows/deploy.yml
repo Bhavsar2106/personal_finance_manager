@@ -27,4 +27,9 @@ jobs:
             rm -rf personal_finance_manager
             git clone https://github.com/Bhavsar2106/personal_finance_manager.git
             cd personal_finance_manager
+            CONTAINER_ID=$(docker ps -aqf "name=mongodb")
+            if [ ! -z "$CONTAINER_ID" ]; then
+              docker container stop $CONTAINER_ID
+              docker container rm $CONTAINER_ID
+            fi
             docker-compose -f docker-compose.prod.yml up -d --build
