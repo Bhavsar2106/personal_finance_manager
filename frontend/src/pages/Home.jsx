@@ -211,7 +211,7 @@ const Home = () => {
               })}
             </h2>
             <p className="mt-2 text-lg leading-8 text-gray-600">
-              This is a sample of a monthly budget. You can use this to track
+              Monthly budget, You can use this to track
               your expenses and income.
             </p>
           </div>
