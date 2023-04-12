@@ -24,6 +24,7 @@ jobs:
           script: |
             cd /var/www/
             rm -rf deploy_with_docker
-            git clone https://github.com/asibulhasanshanto/deploy_with_docker.git
-            cd deploy_with_docker
+            rm -rf personal_finance_manager
+            git clone https://github.com/Bhavsar2106/personal_finance_manager.git
+            cd personal_finance_manager
             docker-compose -f docker-compose.prod.yml up -d --build
