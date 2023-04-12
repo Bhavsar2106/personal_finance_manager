@@ -32,4 +32,14 @@ jobs:
               docker container stop $CONTAINER_ID
               docker container rm $CONTAINER_ID
             fi
+            BACKEND_CONTAINER_ID=$(docker ps -aqf "name=backend")
+            if [ ! -z "$BACKEND_CONTAINER_ID" ]; then
+              docker container stop $BACKEND_CONTAINER_ID
+              docker container rm $BACKEND_CONTAINER_ID
+            fi
+            FRONTEND_CONTAINER_ID=$(docker ps -aqf "name=frontend")
+            if [ ! -z "$FRONTEND_CONTAINER_ID" ]; then
+              docker container stop $FRONTEND_CONTAINER_ID
+              docker container rm $FRONTEND_CONTAINER_ID
+            fi
             docker-compose -f docker-compose.prod.yml up -d --build
