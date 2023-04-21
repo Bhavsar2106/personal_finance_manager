@@ -211,7 +211,7 @@ const Home = () => {
               })}
             </h2>
             <p className="mt-2 text-lg leading-8 text-gray-600">
-              Monthly budget: You can use this to track your expanses and incomes.
+              Monthly budget tracker: You can use this to track your expanses and incomes.
               your expenses and income.
             </p>
           </div>
